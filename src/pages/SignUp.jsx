@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled/";
-import logo from "../images/logo_all.png";
+import logo from "../images/logo_ver.png";
 
 const All = styled.div`
   width: 100%;
@@ -85,7 +85,7 @@ function Signup() {
   return (
     <All>
       <Base>
-        <Img src={logo} width={320} height={100} alt="logo" />
+        <Img src={logo} width={142} height={108} alt="logo" />
         <Label>회원가입</Label>
         <Group>
           <Label>이름</Label>

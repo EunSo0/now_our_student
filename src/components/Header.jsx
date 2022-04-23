@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { VscAccount } from "react-icons/vsc";
-import textlogo from "../images/textlogo.png";
+import logo from "../images/logo_ho.png";
 
 const Base = styled.div`
   width: 100%;
@@ -92,7 +92,7 @@ function Header() {
           <MenuList>
             <MenuLeft>
               <Link href="/">
-                <img src={textlogo} width={200} height={45} alt="textlogo" />
+                <img src={logo} width={212} height={37} alt="logo" />
               </Link>
             </MenuLeft>
             <MenuLeft>

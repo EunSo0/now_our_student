@@ -1,6 +1,6 @@
 import styled from "@emotion/styled/";
 import React from "react";
-import logo from "../images/logo_all.png";
+import logo from "../images/logo_ver.png";
 
 const Img = styled.img`
   display: block;
@@ -67,7 +67,9 @@ function Signin() {
   return (
     <All>
       <Base>
-        <Img src={logo} width={320} height={100} alt="logo" />
+        <Link href="/">
+          <Img src={logo} width={142} height={108} alt="logo" />
+        </Link>
         <Input placeholder="이메일" type="text" id="email" />
         <Input placeholder="비밀번호" type="password" id="password" />
         <Button>로그인</Button>
