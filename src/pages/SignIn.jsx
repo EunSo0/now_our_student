@@ -14,12 +14,11 @@ const All = styled.div`
 
 const Base = styled.div`
   flex: 1 0 auto;
-  margin: 0px auto;
+  margin: -95px auto;
   max-width: 300px;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
@@ -31,23 +30,23 @@ const Input = styled.input`
   border-radius: 4px;
   border: 1px solid #dfdfdf;
   width: 15rem;
-  height: 2rem;
+  height: 1.5rem;
   max-width: 100%;
-  margin: -1px auto;
+  margin: 5px auto;
   display: block;
 `;
 const Button = styled.button`
   font: inherit;
-  background-color: #56c271;
+  background-color: #b6884c;
   color: #ffffff;
-  border: 1px solid #56c271;
+  border: 1px solid #b6884c;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
   margin: 15px auto;
   display: block;
-  width: 16rem;
-  height: 3rem;
+  width: 16.3rem;
+  height: 2.5rem;
 `;
 
 const Text = styled.a`

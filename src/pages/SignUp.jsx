@@ -52,6 +52,14 @@ const Text = styled.h1`
   color: rgb(150, 150, 150);
 `;
 
+const LabelL = styled.a`
+  font-weight: 1000;
+  display: flex;
+  font-size: 20px;
+  margin: 10px;
+  color: rgb(100, 100, 100);
+`;
+
 const TextEmpha = styled.h1`
   font-size: 15px;
   text-align: center;
@@ -61,9 +69,9 @@ const TextEmpha = styled.h1`
 const Button = styled.button`
   font: inherit;
   font-weight: 800;
-  background-color: #56c271;
+  background-color: #b6884c;
   color: #ffffff;
-  border: 1px solid #56c271;
+  border: 1px solid #b6884c;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
@@ -85,8 +93,10 @@ function Signup() {
   return (
     <All>
       <Base>
-        <Img src={logo} width={142} height={108} alt="logo" />
-        <Label>회원가입</Label>
+        <Link href="/">
+          <Img src={logo} width={142} height={108} alt="logo" />
+        </Link>
+        <LabelL>회원가입</LabelL>
         <Group>
           <Label>이름</Label>
           <Input type="text" id="name" />
@@ -114,7 +124,7 @@ function Signup() {
         </Group>
         <Group>
           <Label>휴대전화</Label>
-          <Input type="number" id="number" />
+          <Input type="text" id="number" />
         </Group>
         <Group>
           <Label>가입자신분</Label>

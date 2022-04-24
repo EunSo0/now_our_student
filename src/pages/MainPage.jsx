@@ -1,35 +1,40 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Header from "../components/Header";
-import logo from "../images/logo_color.png";
-// import Navigation from "../components/Navigation";
+import mainText from "../images/main_text.png";
+import mainImg from "../images/main_img.png";
 
+const Main = styled.div`
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  height: 85%;
+`;
+
+const Wrap = styled.div`
+  flex: 1 0 auto;
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+`;
 const Img = styled.img`
-  display: block;
-  margin: 100px auto 0;
-`;
-
-const Text = styled.h2`
-  font-size: 15px;
-  text-align: center;
-  color: rgb(90, 90, 90);
-`;
-
-const Link = styled.a`
-  text-decoration: none;
+  display: flex;
+  margin: 0 3rem;
 `;
 
 function MainPage() {
   return (
     <>
       <Header />
-      <Img src={logo} width={500} height={500} alt="logo" />
-      <Link href="/signin">
-        <Text>로그인</Text>
-      </Link>
-      <Link href="/signup">
-        <Text>회원가입</Text>
-      </Link>
+      <Main>
+        <Wrap>
+          <Img src={mainImg} width={530} height={415} alt="logo" />
+          <Img src={mainText} width={260} height={255} alt="logo" />
+        </Wrap>
+      </Main>
     </>
   );
 }
