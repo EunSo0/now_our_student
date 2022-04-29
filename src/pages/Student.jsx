@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import StuTable from "../components/table/StuTable";
+import StuContainer from "../container/StuContainer";
 
 function Student() {
   return (
     <>
       <Header />
-      <StuTable />
+      <StuContainer />
     </>
   );
 }

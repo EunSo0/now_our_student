@@ -1,8 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react/jsx-filename-extension */
-import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "@emotion/styled/";
+import { useInfoState, useInfoNextId } from "./infoContext";
 import Modal from "./Modal";
 import Post from "./Post";
 import Tr from "./Tr";
@@ -31,17 +31,6 @@ function StuTable() {
   const [info, setInfo] = useState([]);
   const [selected, setSelected] = useState("");
   const [modalOn, setModalOn] = useState(false);
-
-  // 고유 값으로 사용 될 id
-  // ref 를 사용하여 변수 담기
-  const nextId = useRef(11);
-
-  // 더미 데이터 호출
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then((res) => setInfo(res.data));
-  }, []);
 
   const handleSave = (data) => {
     // 데이터 수정하기
@@ -107,11 +96,11 @@ function StuTable() {
       <Table>
         <Thead>
           <TR>
-            <TH>Id.</TH>
-            <TH>Name</TH>
-            <TH>Email</TH>
-            <TH>Phone No.</TH>
-            <TH>Website</TH>
+            <TH>이름</TH>
+            <TH>학교</TH>
+            <TH>시작연도</TH>
+            <TH>시작학년</TH>
+            <TH>선택과목</TH>
             <TH>Edit</TH>
             <TH>Delete</TH>
           </TR>

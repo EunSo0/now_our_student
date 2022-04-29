@@ -52,7 +52,7 @@ export default function App() {
       <CartesianGrid strokeDasharray="0" />
       <XAxis dataKey="name" />
       <YAxis />
-      <Tooltip />
+      <Tooltip height="5px" />
       <Legend />
       <Line type="monotone" dataKey="score" stroke="#82ca9d" />
     </LineChart>

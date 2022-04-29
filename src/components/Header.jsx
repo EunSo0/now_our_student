@@ -102,8 +102,16 @@ function Header() {
                   학생조회
                 </MenuButton>
               </Link>
-              <Link href="/score">
-                <MenuButton active={pathname === "/score"}>성적조회</MenuButton>
+              <Link href="/scorestu">
+                <MenuButton
+                  active={
+                    pathname === "/scorestu" ||
+                    pathname === "/nation" ||
+                    pathname === "/editorial"
+                  }
+                >
+                  성적조회
+                </MenuButton>
               </Link>
             </MenuLeft>
             {/* <MenuRight>

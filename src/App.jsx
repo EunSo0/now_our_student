@@ -5,7 +5,9 @@ import SignIn from "./pages/SignIn";
 import Signup from "./pages/SignUp";
 import MyPage from "./pages/MyPage";
 import Student from "./pages/Student";
-import Score from "./pages/Score";
+import ScoreStu from "./pages/ScoreStu";
+import NationScore from "./pages/NationScore";
+import EditorialScore from "./pages/EditorialScore";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/mypage" component={MyPage} />
         <Route exact path="/student" component={Student} />
-        <Route exact path="/score" component={Score} />
+        <Route exact path="/scorestu" component={ScoreStu} />
+        <Route exact path="/nation" component={NationScore} />
+        <Route exact path="/editorial" component={EditorialScore} />
       </Switch>
     </Router>
   );

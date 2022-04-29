@@ -5,6 +5,7 @@ import React from "react";
 import styled from "@emotion/styled/";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useInfoState, useInfoDispatch } from "./infoContext";
 
 const TR = styled.tr`
   padding: 3px;
@@ -17,24 +18,21 @@ const TD = styled.td`
   width: 5%;
 `;
 
-function Td({ item, handleRemove, handleEdit }) {
-  const onRemove = () => {
-    handleRemove(item.id);
-  };
+function Td(id) {
+  const info = useInfoState();
+  const dispatch = useInfoDispatch();
 
-  const onEdit = () => {
-    handleEdit(item);
-  };
+  const onRemove = () => dispatch({ type: "REMOVE", id });
 
   return (
     <TR>
-      <TD>{item.id}</TD>
-      <TD>{item.name}</TD>
-      <TD>{item.email}</TD>
-      <TD>{item.phone}</TD>
-      <TD>{item.website}</TD>
+      <TD>{info.stu_name}</TD>
+      <TD>{info.stu_school}</TD>
+      <TD>{info.stu_start_year}</TD>
+      <TD>{info.stu_start_grade}</TD>
+      <TD>{info.stu_selected_sub}</TD>
       <TD>
-        <FiEdit onClick={onEdit} size={22} color="#4682B4" />
+        <FiEdit size={22} color="#4682B4" />
       </TD>
       <TD>
         <RiDeleteBin6Line onClick={onRemove} size={22} color="#b2443e" />

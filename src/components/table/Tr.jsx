@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import Td from "./Td";
+import { useInfoState } from "./infoContext";
 
-function Tr({ info, handleRemove, handleEdit }) {
+function Tr() {
+  const infos = useInfoState();
   return (
     <tbody>
-      {info.map((item) => {
+      {infos.map((info) => {
         return (
           <Td
-            key={item.id}
-            item={item}
+            key={info.id}
+            item={info}
             handleRemove={handleRemove}
             handleEdit={handleEdit}
           />
